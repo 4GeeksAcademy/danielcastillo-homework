@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Comence por el html, baja hasta conseguir el html-->
+<head>
+    <meta charset="UTF-8">
+<!--Este es el titulo de la pestana del navegador-->
+    <title>Post instagram</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fdf596022e.js" crossorigin="anonymous"></script>
+
+<!--En la parte superior pusimos la font-family ROBOTO y en la inferior la usamos-->
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+            margin: 0;
+        }
+
+/*con width especifico el ancho que quiero para el post, 
+y le colocamos un blanco para que resalte en el gris del fondo
+Agregamos border-radius para redonder las esquinas*/
+
+        .ig-post {
+            width: 400px;
+            background:#fff;
+            border: 1px solid #dbdbdb;
+            border-radius: 10px;
+        }
+
+/*Este es nuestra segunda caja, donde asignamos la foto de perfil y el nombre de usuario*/
+
+        .post-header {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+
+/*el border radius del avatar al 50% nos hace un circulo perfecto,
+el width/height es el tamano del avatar, y el margin-right 10px*/
+
+        .avatar {
+            border-radius: 50%;
+            width: 40px;
+            height: 40x;
+            margin-right: 10px;
+        }
+
+/*Este es el nombre de usuario que el font-weight delimita como 700 y le damos un espacio hacia ambos lados de 10px*/
+
+        .username {
+            font-weight: 700;
+            padding: 0 10px;
+        }
+
+/*Esta es la imagen del post, simplemente le decimos que actue como un bloque y que utilice el 100% del espacio.*/
+
+        .post-img {
+            width: 100%;
+            display: block;
+        }
+
+/*Display flex para que los muestre en linea, fontsize despues de muchas prueba y error fue lo que encontre
+para ajustar el tamano de los iconos*/
+
+        .post-actions {
+            display: flex;
+            gap: 10px;
+            padding: 10px 10px;
+            font-size: 15px;
+        }
+
+/*Este es el caption ques es 'concentrado'*/
+
+        .post-caption {
+            padding: 0 3px;
+            margin-bottom: 8px;
+        }
+
+/*Cuando utilizamos span en el codigo fue para esto, para poder editar el texto libremente*/
+
+        .caption-text {
+            font-weight: 400;
+        }
+
+/* Esttuve cerca de ponerlo en italic, pero preferi dejarlo asi. aqui culmina nuestro codigo, 
+espero haber explicado bien.*/
+
+        .post-time {
+            font-size: 10px;
+            color:#8e8e8e;
+            padding: 30px 12px 12px;
+        }
+    </style>
+</head>
+<!--Aqui comence, dibuje en una hoja como queria que se viera mi post de ig*-->
+
+<body>
+<!--Utilice el primer div como header donde pondria la foto de perfil y el nombre de usuario, en este caso, leomessi-->
+    <div class="ig-post">
+        <div class="post-header">
+<!--Busque en google una foto que me gustara de el, sencillamente le di click derecho, abrir imagen en una nueva pestana y copie el enlace aca-->
+            <img src="https://imageio.forbes.com/specials-images/imageserve/663e595b4509f97fdafb95f5/0x0.jpg?format=jpg&crop=383,383,x1045,y23,safe&height=416&width=416&fit=bounds"  class="avatar">
+            <span> <class="username"> leomessi </span>
+        </div>
+<!--Mismo proceso de la imagen anterior-->
+<!--En este bloque ira solo la imagen asi que no vi una necesidad de crear un div solo para ella, pense que podia complicarme la vida despues-->
+        <img src="https://fifpro.org/media/5chb3dva/lionel-messi_imago1019567000h.jpg?rxy=0.32986930611281567,0.18704579979466449&rnd=133378758718600000"  class="post-img">
+
+        <div class="post-actions">
+<!--Utilice fontawesome para poner los iconos de mi post, fue algo nuevo y me parecio recontra util-->
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-regular fa-comment"></i>
+            <i class="fa-regular fa-paper-plane"></i>
+        </div>
+<!--utlizamos la etiqueta span para poder editar ambos textos por separado
+ya que en instagra, el nombre de usuario se muestra en negrita y el caption no.-->
+        <div class="post-caption">
+            <span class="username">leomessi</span>
+            <span class="caption-text">Concentrado.</span>
+        </div>
+
+        <div class="post-time">
+            Hace 1 Hora
+        </div>
+   <!--Vamos al CSS.-->
+    </div>
+</body>
+</html>
